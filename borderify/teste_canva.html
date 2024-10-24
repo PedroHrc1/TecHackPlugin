@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste de Canvas Fingerprinting</title>
+  <script>
+    window.addEventListener('load', function() {
+      var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      context.textBaseline = "top";
+      context.font = "14px 'Arial'";
+      context.fillStyle = "#f60";
+      context.fillRect(125,1,62,20);
+      context.fillStyle = "#069";
+      context.fillText("Cwm fjordbank glyphs vext quiz", 2, 15);
+      context.fillStyle = "rgba(102, 204, 0, 0.7)";
+      context.fillText("Cwm fjordbank glyphs vext quiz", 4, 17);
+      var dataURL = canvas.toDataURL();
+      console.log('Canvas Fingerprint:', dataURL);
+    });
+  </script>
+</head>
+<body>
+  <h1>Página de Teste de Canvas Fingerprinting</h1>
+</body>
+</html>

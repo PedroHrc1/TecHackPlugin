@@ -2,17 +2,44 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Domínios de Terceiros</title>
+  <title>Segurança Web</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 10px; }
-    h1 { font-size: 16px; }
+    body { font-family: Arial, sans-serif; padding: 10px; width: 300px; }
+    h1 { font-size: 16px; margin-bottom: 5px; }
     ul { list-style-type: none; padding: 0; }
-    li { margin-bottom: 5px; }
+    li { margin-bottom: 5px; word-wrap: break-word; }
+    .section { margin-bottom: 20px; }
+    .score { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+    .evaluation { font-size: 14px; margin-bottom: 10px; }
   </style>
 </head>
 <body>
-  <h1>Domínios de Terceiros Detectados:</h1>
-  <ul id="domain-list"></ul>
+  <div class="section">
+    <div class="score" id="privacy-score">Pontuação de Privacidade: 100/100</div>
+    <div class="evaluation" id="privacy-evaluation">Avaliando...</div>
+    <h1>Deduções:</h1>
+    <ul id="deductions-list"></ul>
+  </div>
+  <div class="section">
+    <h1>Cookies Detectados:</h1>
+    <div id="cookie-list"></div>
+  </div>
+  <div class="section">
+    <h1>Domínios de Terceiros Detectados:</h1>
+    <ul id="domain-list"></ul>
+  </div>
+  <div class="section">
+    <h1>Ameaças de Hijacking Detectadas:</h1>
+    <ul id="hijack-list"></ul>
+  </div>
+  <div class="section">
+    <h1>Dados Armazenados no Local Storage:</h1>
+    <ul id="storage-list"></ul>
+  </div>
+  <div class="section">
+    <h1>Canvas Fingerprinting Detectado:</h1>
+    <ul id="canvas-list"></ul>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
